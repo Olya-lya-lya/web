@@ -1,0 +1,30 @@
+.consultation {
+    min-height: 680px;
+    padding: 100px 0 92px 0;
+    background: url("../../src/img/consultation.jpg") center center/cover no-repeat;
+    &__title {
+        text-align: left;
+        color: #FFF;
+        font-size: 36px;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    &__desc {
+        text-align: left;
+        margin-top: 8px;
+        color: #FFF;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 30px;
+    }
+    &__button {
+        margin-top: 17px;
+        width: 303px;
+        height: 58px;
+        color: #FFF;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+}
