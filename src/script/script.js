@@ -25,5 +25,49 @@ $(document).ready(function(){
 
         toggleSlide('.catalog-item__link');
         toggleSlide('.catalog-item__back');
+
+        $('[data-modal=consaltation]').on('click', function() {
+                $('.overlay, #consaltation').fadeIn('slow');
+        });
+
+        $('.modal__close').on('click', function() {
+                $('.overlay, #consaltation, #thanks, #order').fadeOut('slow');
+        });
+
+        $('.button_mini').each(function (i) {
+                $(this).on('click', function() {
+                        $('#order .modal__descr').text($('.catalog-item__subtitle').eq(i).text());
+                        $('.overlay, #order').fadeIn('slow');
+                });
+        });
+
+
+        function validateForms(form) {
+                $(form).validate({
+                        rules: {
+                                name: "required",
+                                phone: "required", 
+                                email: {
+                                        required: true,
+                                        email: true
+                                }
+                        },
+                        messages: {
+                                name: "Пожалуйста, введите свое имя",
+                                phone: "Пожалуйста введиет свой телефон",
+                                email: {
+                                        required: "Пожалуйста, введите свой email",
+                                        email: "Неправильно введен адрес почты"
+                                }
+                        }
+                });
+        };
+        validateForms('#consultation-form');
+        validateForms('#consaltation form');
+        validateForms('#order form');
+
+        $("input [name=phone]").mask("+375 (29) 999-99-99");
   });
+
+
       

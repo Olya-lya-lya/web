@@ -14,10 +14,16 @@
         width: 300px;
         height: 50px;
         font-size: 16px;
+        &:hover {
+            box-shadow: 3px 3px 5px $main-color; 
+        }
     }
     &_mini {
         width: 135px;
         height: 44px;
         font-size: 14px;
+        &:hover {
+            box-shadow: 2px 2px 4px $main-color;
+        }
     }
 }
